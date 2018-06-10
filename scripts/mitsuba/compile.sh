@@ -11,9 +11,9 @@
 # Load modules
 module purge
 
-module load mercurial/intel/4.0.1
 module load gcc/6.3.0
 module load cmake/intel/3.7.1
+module swap python/intel python3/intel/3.6.3
 
 export CC=${GCC_ROOT}/bin/gcc
 export CXX=${GCC_ROOT}/bin/g++
