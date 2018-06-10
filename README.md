@@ -72,3 +72,12 @@ Then create the symlink:
 ```bash
 ln -s <path_to_pyrenderer>/render.py ~/.local/bin/pyrenderer
 ```
+
+## Testing
+
+If the installation was successful, you should be able to run the following commands:
+
+```bash
+python -c "import mitsuba; import mitsuba.core; import mitsuba.render"
+python -c "import pymesh; pymesh.test()"
+```
