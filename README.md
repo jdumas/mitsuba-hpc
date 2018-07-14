@@ -53,6 +53,8 @@ git clean -fdx .
 ./setup.py install --user
 ```
 
+Alternatively, run the compilation script under `script/pymesh/`. You can simply type `make pymesh` as a shortcut.
+
 ## PyRenderer
 
 ```bash

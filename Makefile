@@ -1,4 +1,4 @@
-.PHONY: all clean boost mitsuba
+.PHONY: all clean boost mitsuba pymesh
 
 # Building directory
 BUILD=build
@@ -12,6 +12,9 @@ boost:
 mitsuba:
 	cd scripts/mitsuba && bash prepare.sh
 	cd scripts/mitsuba && sbatch compile.sh
+
+pymesh:
+	cd scripts/pymesh && sbatch compile.sh
 
 clean:
 	@rm -rf $(BUILD)
