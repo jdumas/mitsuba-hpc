@@ -2,9 +2,9 @@
 #
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=20
 #SBATCH --time=1:00:00
-#SBATCH --mem=32GB
+#SBATCH --mem=64GB
 #SBATCH --output=../../build/log/pymesh_%A.out
 #SBATCH --error=../../build/log/pymesh_%A.err
 
