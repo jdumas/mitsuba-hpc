@@ -5,10 +5,9 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --time=1:00:00
 #SBATCH --mem=32GB
-#SBATCH --output=log_pymesh_%A.out
-#SBATCH --error=log_pymesh_%A.err
+#SBATCH --output=../../build/log/pymesh_%A.out
+#SBATCH --error=../../build/log/pymesh_%A.err
 
-# Load modules
 module purge
 
 module load gcc/6.3.0
@@ -28,9 +27,9 @@ export MPFR_DIR=${MPFR_ROOT}
 # Run job
 cd "${SLURM_SUBMIT_DIR}"
 
-if [ ! -d PyMesh ];
+if [ ! -d PyMesh ]; then
 	git clone --recursive git@github.com:qnzhou/PyMesh.git
-end
+fi
 
 pushd PyMesh
 git clean -fdx .
